@@ -1,0 +1,65 @@
+---
+description:Pokémon Identifier & Stats Viewer
+Project Overview
+Build an image recognition system that identifies Pokémon species from uploaded images and displays their detailed stats and information.
+Tech Stack Integration
+Cursor IDE: Primary development environment
+Python: Core programming language with ML libraries
+PostgreSQL: Store Pokémon stats data and classification results
+Git/GitHub: Version control and collaboration
+Key Libraries: TensorFlow/Keras, OpenCV, FastAPI, SQLAlchemy
+Project Goals
+Develop a CNN model to classify Pokémon species from images
+Create a database with comprehensive Pokémon stats and information
+Build REST API for image classification and stats retrieval
+Design a web interface for image upload and stats display
+Store classification history in PostgreSQL
+Core Features
+Pokémon Image Classification: Upload image and identify Pokémon species (20-50 different species)
+Stats Display: Show detailed Pokémon information including:
+Base stats (HP, Attack, Defense, Speed, Special Attack, Special Defense)
+Type(s) and type effectiveness
+Height, weight, and abilities
+Generation and Pokédex number
+Classification History: Track previous identifications and results
+Confidence Scoring: Display prediction confidence for each classification
+Search by Name: Alternative way to look up Pokémon stats
+Technical Requirements
+Python 3.8+ with ML libraries (TensorFlow, OpenCV, Pillow, NumPy)
+PostgreSQL database for Pokémon stats and classification logs
+FastAPI for REST API development
+Basic web technologies (HTML/CSS/JavaScript) for user interface
+Pokémon image dataset and stats data
+Success Metrics
+Model Performance: >90% accuracy on Pokémon classification
+Database Integration: Complete Pokémon stats database with proper relationships
+User Experience: Smooth image upload with immediate stats display
+API Functionality: Working endpoints for classification and stats retrieval
+Documentation: Clear setup instructions and usage guide
+Learning Outcomes
+Practical experience with image classification and CNN models
+Database design for structured data storage and retrieval
+REST API development and integration
+Frontend development for ML applications
+Data preprocessing and model training workflows
+Version control and project documentation
+Deliverables
+Trained Pokémon classification model
+PostgreSQL database with complete Pokémon stats
+REST API with classification and stats endpoints
+Web interface for image upload and stats viewing
+Classification history tracking system
+Complete project documentation and demo
+Data Resources
+Images: Kaggle Pokémon Images Dataset (https://www.kaggle.com/datasets/vishalsubbiah/pokemon-images-and-types)
+Stats Data: PokéAPI (https://pokeapi.co/api/v2/) for comprehensive Pokémon information
+Backup Data: GitHub Pokémon CSV datasets for offline access
+This simplified project focuses specifically on the core functionality of image recognition and stats display, making it more achievable while still providing comprehensive learning experience with the full ML pipeline.
+Vishal Subbiah | Kaggle
+Kaggle is the world’s largest data science community with powerful tools and resources to help you achieve your data science goals.
+ 
+Good morning, team, here's the task you will need to work on and complete by Friday. It is similar to what we have done so far, but also gets into image recognition.  Happy coding! 
+ 
+globs:
+alwaysApply: false
+---
