@@ -22,8 +22,7 @@ def fetch_pokemon_data(pokemon_id):
     url = f"{POKEAPI_URL}{pokemon_id}"
     response = requests.get(url)
     if response.status_code != 200:
-        print(f"Failed to fetch data for Pokémon ID {pokemon_id}")
-        return None
+        raise Exception(f"Failed to fetch data for Pokémon ID {pokemon_id} (status code: {response.status_code})")
     data = response.json()
     # Extract relevant fields
     stats = {stat['stat']['name']: stat['base_stat'] for stat in data['stats']}
@@ -48,15 +47,20 @@ def main():
     total_pokemon = get_total_pokemon()
     print(f"Total Pokémon: {total_pokemon}")
     pokemon_list = []
-    for i in range(1, total_pokemon + 1):
-        print(f"Fetching Pokémon ID {i}...")
-        data = fetch_pokemon_data(i)
-        if data:
-            pokemon_list.append(data)
-        time.sleep(0.2)  # To avoid hitting API rate limits
-    df = pd.DataFrame(pokemon_list)
-    df.to_csv(OUTPUT_FILE, index=False)
-    print(f"Saved stats for {len(df)} Pokémon to {OUTPUT_FILE}")
+    try:
+        for i in range(1, total_pokemon + 1):
+            print(f"Fetching Pokémon ID {i}...")
+            data = fetch_pokemon_data(i)
+            if data:
+                pokemon_list.append(data)
+            time.sleep(0.2)
+    except Exception as e:
+        print(f"Error occurred: {e}")
+    finally:
+        if pokemon_list:
+            df = pd.DataFrame(pokemon_list)
+            df.to_csv(OUTPUT_FILE, index=False)
+            print(f"Saved stats for {len(df)} Pokémon to {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     main() 
