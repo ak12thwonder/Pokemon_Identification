@@ -9,7 +9,7 @@ router = APIRouter()
 
 # Load the model once at startup
 MODEL_PATH = os.path.join(os.path.dirname(__file__), '..', 'models',
-'pokemon_cnn_model.keras')
+'pokemon_resnet_model.keras')
 model = load_model(MODEL_PATH)
 
 # Get class names from the folder structure
