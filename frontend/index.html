@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokémon Identifier</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Pokémon Identifier</h1>
+  <div class="container">
+    <div class="image-preview" id="imagePreview">
+      <span>Image Preview</span>
+    </div>
+    <input type="file" id="imageInput" accept="image/*">
+    <button id="predictBtn" disabled>Predict</button>
+    <div id="result"></div>
+    <div class="error" id="error"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
