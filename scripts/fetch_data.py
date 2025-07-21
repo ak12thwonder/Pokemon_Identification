@@ -1,3 +1,7 @@
+'''Fetching the data(Stats of the pokemon) from the API And saving as the output of the 
+in the csv formate   '''
+
+
 import requests
 import pandas as pd
 import os

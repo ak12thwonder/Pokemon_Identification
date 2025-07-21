@@ -18,8 +18,8 @@ class_names = sorted([d for d in os.listdir(IMAGES_DIR) if os.path.isdir(os.path
 
 def preprocess_image(image_bytes):
     img = Image.open(image_bytes).convert('RGB')
-    img = img.resize((128, 128))  # Change to your model's input size if different
-    arr = np.array(img) / 255.0
+    img = img.resize((128, 128))
+    arr = np.array(img)  # Do NOT divide by 255 here!
     arr = np.expand_dims(arr, axis=0)
     return arr
 
